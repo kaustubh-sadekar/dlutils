@@ -32,6 +32,15 @@ def getOutShape(input_dim,layersList):
     
     return H_in,W_in,out_ch
 
+def upconv(Din,k,s,p,op=0):
+    Dout = (Din-1)*s - 2*p + (k-1) + op + 1
+    print(Dout)
+
+def conv(Din,k,s,p,op=0):
+    Dout = (Din+2*p - (k-1) - 1)//s + 1
+    print(Dout)
+
+
 # input_dim = (1,600,800)
 # layersList = [{'conv':(1,7,3,1,1,1)},{'mp':(2,2,0,1)},{'conv':(7,14,3,1,1,1)},{'mp':(2,2,0,1)},{'conv':(14,30,3,1,1,1)},{'mp':(2,2,0,1)}]
 
