@@ -33,10 +33,25 @@ def getOutShape(input_dim,layersList):
     return H_in,W_in,out_ch
 
 def upconv(Din,k,s,p,op=0):
+    """
+    Din : Input dimension
+    k : kernel size
+    s : stride
+    p : padding
+    op: output padding
+    """
     Dout = (Din-1)*s - 2*p + (k-1) + op + 1
     print(Dout)
 
 def conv(Din,k,s,p,op=0):
+    """
+    
+    Din : Input dimension
+    k : kernel size
+    s : stride
+    p : padding
+    op: output padding
+    """
     Dout = (Din+2*p - (k-1) - 1)//s + 1
     print(Dout)
 
