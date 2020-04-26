@@ -17,4 +17,4 @@ layersList = [{'conv':(1,7,3,1,1,1)},{'mp':(2,2,0,1)},{'conv':(7,14,3,1,1,1)},{'
 out = kdlutils.kdlutils.getOutShape(input_dim,layersList)
 print(out)
 ```
-
+Documentation and new codes will be uploaded soon.
